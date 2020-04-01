@@ -48,7 +48,7 @@
                             </a>
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                            <a href="settings.php" class="dropdown-item notify-item">
                                 <i class="zmdi zmdi-settings"></i> <span>Settings</span>
                             </a>
 
