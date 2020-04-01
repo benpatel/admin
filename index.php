@@ -27,7 +27,6 @@ require 'includes/header_start.php';
 
                 <p class="text-center">Pages, Gallery and rates are avaialbe to change, more changes are coming Soon.....</p>
 
-
             </div>
         </div><!-- end col-->
 
