@@ -28,7 +28,7 @@ $("#uploadTrigger").click(function(){
 
                 console.log(data);
                 if(data.status=='success'){
-                  $("#uploadTrigger").hide();
+                  $("#uploadTrigger").text("Change Image");
                    img = $('<img src="banners/'+data.img+'" class="img-fluid">');
                    $(".banner_image").empty();
                    $(".banner_image").append(img);

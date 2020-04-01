@@ -38,7 +38,7 @@ require 'includes/header_start.php';
                             
                             <th>Page Name</th>
                             <th style="width:150px;">Visibility</th>
-                            <th  style="width:250px;">Action</th>
+                            <th  style="width:350px;" class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,6 +60,7 @@ require 'includes/header_start.php';
 
 
 								   		<div class="button-list">
+                                            <a class="btn btn-sm waves-effect btn-primary" href="sections.php?id=<?php echo $result->id; ?>"> <i class="fa  fa-edit">Manage content</i> </a>
 					                        <a class="btn btn-sm waves-effect btn-warning" href="edit_page.php?id=<?php echo $result->id; ?>"> <i class="fa  fa-edit"> Edit</i> </a>
 					                         <?php if($result->status=='unlocked'){ ?>
                                              <a class="btn btn-sm waves-effect btn-danger btn-delete-page" data-id="<?php echo $result->id; ?>">  <i class="fa fa-trash"> Delete</i> </a>

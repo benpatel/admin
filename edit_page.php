@@ -20,6 +20,7 @@ require 'includes/header_start.php';
 							$page_title = $result->page_title;
 							$page_description = $result->page_description;
 							$visibility = $result->visibility;
+                            $page_image = $result->page_image;
                             $page_subtitle = $result->page_subtitle;
 							$checked='';
                             $status = $result->status;
@@ -48,6 +49,21 @@ require 'includes/header_start.php';
         <div class="col-md-12">
             <div class="card-box">
 
+                <div class="banner_image">
+                    <img src="<?php echo SITE_ADMIN.'banners/'.$page_image;?> " style="padding:5px; ">
+                </div>
+                <form  action="banner-upload.php" method="post" id="file_upload" enctype="multipart/form-data">
+                    <div class="form-group row">
+                        <div class="col-sm-12">
+                            
+                            <p class="btn btn-success"  id="uploadTrigger">Change Banner</p>
+                        </div>
+                     </div>
+                     <input type="file" name="fileToUpload" class="hidden"  id="fileToUpload" style="visibility:hidden">
+                </form> 
+
+
+
             	<form method="post" action="edit_page_process.php" data-parsley-validate novalidate>
                     
             		<input type="hidden" name="page_id" value="<?php echo $page_id; ?>">
@@ -55,7 +71,7 @@ require 'includes/header_start.php';
                         <label for="page_title">Page Title<span class="text-danger">*</span></label>
                         <input type="text" name="page_title" parsley-trigger="change" required
                                placeholder="Enter Page Title" class="form-control" id="page_title" value="<?php echo $page_title; ?>">
-
+                            <input type="hidden" name="page_image" value="" required="" id="link_banner">
 
 
                     </div>
@@ -74,12 +90,12 @@ require 'includes/header_start.php';
                     </div>
                
 
-                    <div class="form-group">
+                  <!--  <div class="form-group">
                     	<label for="page_title">Description <em class="text-danger"> (Any color formating in this editror will reflect on site as is )</em></label>
             			<textarea name="page_description">
             				<?php echo $page_description; ?>
             			</textarea>
-            		</div>
+            		</div> -->
 
             		<div class="form-group text-right m-b-0">
                         <button class="btn btn-primary waves-effect waves-light" type="submit">
@@ -114,6 +130,7 @@ require 'includes/header_start.php';
 
 <!-- Validation js (Parsleyjs) -->
 <script type="text/javascript" src="assets/plugins/parsleyjs/parsley.min.js"></script>
+<script type="text/javascript" src="assets/js/banner-upload.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {

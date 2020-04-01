@@ -24601,8 +24601,11 @@ a.btn-white-text{
     background: rgba(0,0,0,0.7);   
 }
 .banner_image{
-  text-align: center;
+ 
 }
 .banner_image img{
   max-height: 150px;
+}
+.page_image img{
+ max-height: 150px;
 }

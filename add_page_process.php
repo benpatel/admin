@@ -9,6 +9,7 @@ if(!isset($_POST['page_title']) || $_POST['page_title']==''){
 $page_title = trim($dtb->escape_value($_POST['page_title']));
 $page_description = trim($dtb->escape_value($_POST['page_description']));
 $page_subtitle = trim($dtb->escape_value($_POST['page_subtitle']));
+$page_image = trim($dtb->escape_value($_POST['page_image']));
 
 
 $slug =  slugify($page_title);
@@ -28,8 +29,8 @@ if(isset($_POST['visibility'])){
 	$visibility = 'public';
 }
 
-$sql="INSERT INTO `pages` (`id`, `seller_id`, `page_title`,`slug`,`page_subtitle`, `page_description`, `visibility`) VALUES (
-	NULL, '{$seller_id}', '{$page_title}','{$slug}','{$page_subtitle}', '{$page_description}', '{$visibility}')";
+$sql="INSERT INTO `pages` (`id`, `seller_id`, `page_title`,`slug`,`page_subtitle`, `page_description`,`page_image`, `visibility`) VALUES (
+	NULL, '{$seller_id}', '{$page_title}','{$slug}','{$page_subtitle}', '{$page_description}','{$page_image}', '{$visibility}')";
 
 if($dtb->query($sql)){
 	redirect_to("pages.php");
