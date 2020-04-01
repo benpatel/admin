@@ -12,7 +12,7 @@ $sql="UPDATE `friends` SET  `url` = '{$url}', `name` = '{$name}', `banner` = '{$
 
 
 if($dtb->query($sql)){
-	redirect_to(SITE_BASE."admin/friends.php");
+	redirect_to(SITE_ADMIN."friends.php");
 }
 
 

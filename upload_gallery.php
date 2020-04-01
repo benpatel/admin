@@ -55,7 +55,7 @@ require 'includes/header_start.php';
                             for($x=0; $x<count($uploaded_files['images']); $x++){
                             ?>
 
-                           <div class="uploaded_image" data-img="<?php echo $uploaded_files['images'][$x] ?>" data-gallery="<?php echo $gallery_id; ?>"><p class="image_no"><?php echo $x; ?></p><img data-img="<?php echo $uploaded_files['images'][$x] ?>" src="scripts/image.php?width=300&amp;height:300&amp;cropratio=1:1&amp;image=<?php echo SITE_BASE; ?>admin/gallery/<?php echo $uploaded_files['images'][$x] ?>" class="prd_images"><p class="delate_image"><span>Delete</span></p></div>
+                           <div class="uploaded_image" data-img="<?php echo $uploaded_files['images'][$x] ?>" data-gallery="<?php echo $gallery_id; ?>"><p class="image_no"><?php echo $x; ?></p><img data-img="<?php echo $uploaded_files['images'][$x] ?>" src="scripts/image.php?width=300&amp;height:300&amp;cropratio=1:1&amp;image=<?php echo SITE_ADMIN; ?>gallery/<?php echo $uploaded_files['images'][$x] ?>" class="prd_images"><p class="delate_image"><span>Delete</span></p></div>
 
                            <?php } ?>
 

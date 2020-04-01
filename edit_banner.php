@@ -37,7 +37,7 @@ require 'includes/header_start.php';
         <div class="col-md-12">
             <div class="card-box">
             <div class="banner_image">
-                <img src="<?php echo SITE_BASE.'admin/banners/'.$banner_data->banner;?> " style="padding:5px; ">
+                <img src="<?php echo SITE_ADMIN.'banners/'.$banner_data->banner;?> " style="padding:5px; ">
             </div>
 <form  action="banner-upload.php" method="post" id="file_upload" enctype="multipart/form-data">
 <div class="form-group row">

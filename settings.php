@@ -59,7 +59,7 @@ require 'includes/header_start.php';
         <div class="card m-b-20 card-body text-xs-right">
             <h5 class="card-title">Banners</h5>
             <p class="card-text">Manage Banners.</p>
-            <a href="<?php echo SITE_BASE; ?>admin/banners.php" class="btn btn-primary">Manage Banners</a>
+            <a href="<?php echo SITE_ADMIN ?>banners.php" class="btn btn-primary">Manage Banners</a>
         </div>
     </div>
     

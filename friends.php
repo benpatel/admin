@@ -45,7 +45,7 @@ require 'includes/header_start.php';
 							   ?>
 							   <div class="banner_image" style="text-align: left;border:solid 1px #ccc; padding:5px;">
                                 <p><?php echo $result->name; ?></p>
-                                <img class="ban-images" data-id="<?php echo $result->id; ?>" src="<?php echo SITE_BASE.'admin/banners/'.$result->banner;?> " style="padding:5px; ">
+                                <img class="ban-images" data-id="<?php echo $result->id; ?>" src="<?php echo SITE_ADMIN.'banners/'.$result->banner;?> " style="padding:5px; ">
                                 <p><a href="edit_friend.php?id=<?php echo $result->id; ?>" class="btn btn-secondary">Edit</a> <span  class="btn btn-danger btn-delete-banner" data-id="<?php echo $result->id; ?>">Delete</span></p>
                                </div>
 							   <?php
