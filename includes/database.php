@@ -1,4 +1,4 @@
-<?php require_once("constant.php");
+<?php 
 class Database{
 
 	private $connect;
