@@ -1,0 +1,17 @@
+/banners/
+/banners
+
+/data/
+/data
+
+/gallery/
+/gallery
+
+/scripts/imagecache/
+/scripts/imagecache
+
+scart.php
+images/.DS_Store
+.DS_Store
+.vscode/settings.json
+robots.txt
