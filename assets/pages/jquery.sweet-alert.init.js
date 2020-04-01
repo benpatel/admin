@@ -1,0 +1,234 @@
+/**
+ * Theme: Uplon Admin Template
+ * Author: Coderthemes
+ * SweetAlert
+ */
+
+!function ($) {
+    "use strict";
+
+    var SweetAlert = function () {
+    };
+
+    //examples 
+    SweetAlert.prototype.init = function () {
+
+        // //Basic
+        // $('#sa-basic').click(function () {
+        //     swal("Here's a message!");
+        // });
+
+        // //A title with a text under
+        // $('#sa-title').click(function () {
+        //     swal("Here's a message!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat, tincidunt vitae ipsum et, pellentesque maximus enim. Mauris eleifend ex semper, lobortis purus sed, pharetra felis")
+        // });
+
+        // //Success Message
+        // $('#sa-success').click(function () {
+        //     swal("Good job!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat, tincidunt vitae ipsum et, pellentesque maximus enim. Mauris eleifend ex semper, lobortis purus sed, pharetra felis", "success")
+        // });
+
+        //Warning Message
+        $('#sa-warning').click(function () {
+
+            var btn_text = $('#sa-warning').text();
+            
+            if($('#sa-warning').text()=="Lock Now"){
+
+                var swal_start =    {
+                title: "Are you sure?",
+                text: "Only admin will be able to unlock your site!",
+                type: "warning",
+                showCancelButton: true,
+                cancelButtonClass: 'btn-secondary waves-effect',
+                confirmButtonClass: 'btn-warning',
+                confirmButtonText: "Yes, Lock it!",
+                closeOnConfirm: false
+                }
+
+                }else{
+                    
+                var swal_start =    {
+                title: "Are you sure?",
+                text: "Site will be publicaly availale!",
+                type: "warning",
+                showCancelButton: true,
+                cancelButtonClass: 'btn-secondary waves-effect',
+                confirmButtonClass: 'btn-warning',
+                confirmButtonText: "Yes, Unlock it!",
+                closeOnConfirm: false
+                }  
+            }
+
+
+            swal(swal_start, function () {
+                
+                if($('#sa-warning').text()=="Lock Now"){
+
+                                $.ajax({
+                                        url: "site_lock_update.php",
+                                        method: "POST",
+                                        data: {action:"locked"},
+                                        dataType: "json",
+                                        beforeSend:function(){
+
+                                
+                                        }, 
+                                        success: function(data){
+                                                if(data.status=='success'){
+                                                    $('#sa-warning').text("Unlock Now");
+                                                    swal("Locked!", "Your site has been Locked.", "success");
+                                                }   
+                                        },
+                                         error:function(){
+                                          
+                                          }
+                                        });
+
+
+                    
+
+                }else{
+
+                                 $.ajax({
+                                        url: "site_lock_update.php",
+                                        method: "POST",
+                                        data: {action:"unlocked"},
+                                        dataType: "json",
+                                        beforeSend:function(){
+
+                                
+                                        }, 
+                                        success: function(data){
+                                                if(data.status=='success'){
+                                                    $('#sa-warning').text("Lock Now");
+                                                    swal("Unlocked!", "Your site has been Unlocked.", "success");
+                                                }   
+                                        },
+                                         error:function(){
+                                          
+                                          }
+                                        });
+                    
+                }
+                
+            });
+        });
+
+        // //Parameter
+        // $('#sa-params').click(function () {
+        //     swal({
+        //         title: "Are you sure?",
+        //         text: "You will not be able to recover this imaginary file!",
+        //         type: "warning",
+        //         showCancelButton: true,
+        //         cancelButtonClass: 'btn-secondary waves-effect',
+        //         confirmButtonColor: "#DD6B55",
+        //         confirmButtonText: "Yes, delete it!",
+        //         cancelButtonText: "No, cancel plx!",
+        //         closeOnConfirm: false,
+        //         closeOnCancel: false
+        //     }, function (isConfirm) {
+        //         if (isConfirm) {
+        //             swal("Deleted!", "Your imaginary file has been deleted.", "success");
+        //         } else {
+        //             swal("Cancelled", "Your imaginary file is safe :)", "error");
+        //         }
+        //     });
+        // });
+
+        // //Custom Image
+        // $('#sa-image').click(function () {
+        //     swal({
+        //         title: "Sweet!",
+        //         text: "Here's a custom image.",
+        //         imageUrl: "assets/plugins/bootstrap-sweetalert/thumbs-up.jpg"
+        //     });
+        // });
+
+        // //Auto Close Timer
+        // $('#sa-close').click(function () {
+        //     swal({
+        //         title: "Auto close alert!",
+        //         text: "I will close in 2 seconds.",
+        //         timer: 2000,
+        //         showConfirmButton: false
+        //     });
+        // });
+
+        // //Primary
+        // $('#primary-alert').click(function () {
+        //     swal({
+        //         title: "Are you sure?",
+        //         text: "You will not be able to recover this imaginary file!",
+        //         type: "info",
+        //         showCancelButton: true,
+        //         cancelButtonClass: 'btn-secondary waves-effect waves-light',
+        //         confirmButtonClass: 'btn-primary waves-effect waves-light',
+        //         confirmButtonText: 'Primary!'
+        //     });
+        // });
+
+        // //Info
+        // $('#info-alert').click(function () {
+        //     swal({
+        //         title: "Are you sure?",
+        //         text: "You will not be able to recover this imaginary file!",
+        //         type: "info",
+        //         showCancelButton: true,
+        //         cancelButtonClass: 'btn-secondary waves-effect',
+        //         confirmButtonClass: 'btn-info waves-effect waves-light',
+        //         confirmButtonText: 'Info!'
+        //     });
+        // });
+
+        // //Success
+        // $('#success-alert').click(function () {
+        //     swal({
+        //         title: "Are you sure?",
+        //         text: "You will not be able to recover this imaginary file!",
+        //         type: "success",
+        //         showCancelButton: true,
+        //         cancelButtonClass: 'btn-secondary waves-effect',
+        //         confirmButtonClass: 'btn-success waves-effect waves-light',
+        //         confirmButtonText: 'Success!'
+        //     });
+        // });
+
+        // //Warning
+        // $('#warning-alert').click(function () {
+        //     swal({
+        //         title: "Are you sure?",
+        //         text: "You will not be able to recover this imaginary file!",
+        //         type: "warning",
+        //         showCancelButton: true,
+        //         cancelButtonClass: 'btn-secondary waves-effect',
+        //         confirmButtonClass: 'btn-warning waves-effect waves-light',
+        //         confirmButtonText: 'Warning!'
+        //     });
+        // });
+
+        // //Danger
+        // $('#danger-alert').click(function () {
+        //     swal({
+        //         title: "Are you sure?",
+        //         text: "You will not be able to recover this imaginary file!",
+        //         type: "error",
+        //         showCancelButton: true,
+        //         cancelButtonClass: 'btn-secondary waves-effect',
+        //         confirmButtonClass: 'btn-danger waves-effect waves-light',
+        //         confirmButtonText: 'Danger!'
+        //     });
+        // });
+
+
+    },
+        //init
+        $.SweetAlert = new SweetAlert, $.SweetAlert.Constructor = SweetAlert
+}(window.jQuery),
+
+//initializing 
+    function ($) {
+        "use strict";
+        $.SweetAlert.init()
+    }(window.jQuery);
