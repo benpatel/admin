@@ -314,9 +314,6 @@ a {
 }
 
 /*
-Template Name: Uplon Dashboard
-Author: CoderThemes
-Email: coderthemes$gmail.com
 File: Menu
 */
 .container {
@@ -898,7 +895,7 @@ File: Menu
 }
 
 .wrapper {
-  padding-top: 130px;
+  padding-top: 230px;
 }
 
 /* Notification */
@@ -21698,6 +21695,54 @@ a.btn:focus {
   content: "\e67f";
 }
 
+
+
+/******** Section ************/
+
+.section_box{
+  width:100%;
+  display:block;
+
+}
+
+.section_single{
+
+  width:100%;
+  display:grid;
+  grid-template-columns:360px auto;
+  margin-bottom: 20px;
+  border:solid 1px #ccc;
+  border-top: none;
+  padding: 10px;
+
+
+
+}
+.section_title{
+  background-color: #efefef;
+  border:solid 1px #ccc;
+  padding: 15px;
+    position: relative;
+      padding-right: 200px;
+}
+.section_title h4,.section_title p{
+  margin: 0px;
+
+}
+.section_single .section_image{
+
+}
+
+.section_single .section_data{
+
+}
+
+.section_control{
+  position:  absolute;
+  top:10px;
+  right:10px;
+}
+
 /* =============
    Timeline
 ============= */
@@ -24540,9 +24585,23 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 a.btn-white-text{
     color: #fff !important;
 }
-@media (max-width: 640px)
+@media (max-width: 640px){
+  .section_title{
+    padding-right: 20px;
+  }
+  .section_control{
+    position: relative;
+  }
 .btn-group.m-t-15 {
     display: block !important;
+}
+}
+
+@media (max-width: 992px) {
+
+.section_single{
+  display: block;
+}
 }
 
 /********* Gallery *********/
@@ -24609,3 +24668,4 @@ a.btn-white-text{
 .page_image img{
  max-height: 150px;
 }
+

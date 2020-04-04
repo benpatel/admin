@@ -38,6 +38,14 @@ require 'includes/header_start.php';
     <!-- Page-Title -->
     <div class="row">
         <div class="col-sm-12">
+            <div class="pull-right m-t-15">
+                <a class="btn btn-warning btn-white-text waves-effect waves-light" href="pages.php">
+                   <span class="btn-label"><i class="fa fa-arrow-left"></i>
+                   </span>Back To Pages
+                </a>
+            </div>
+           
+
             <h4 class="page-title">Edit a Page</h4>
         </div>
     </div>
@@ -49,8 +57,12 @@ require 'includes/header_start.php';
         <div class="col-md-12">
             <div class="card-box">
 
+ <?php 
+$page_image !='' ? $page_image=SITE_ADMIN.'banners/'.$page_image : $page_image = SITE_ADMIN."assets/images/page_image.jpg"; 
+                    ?>
+
                 <div class="banner_image">
-                    <img src="<?php echo SITE_ADMIN.'banners/'.$page_image;?> " style="padding:5px; ">
+                    <img src="<?php echo $page_image; ?> " style="padding:5px; ">
                 </div>
                 <form  action="banner-upload.php" method="post" id="file_upload" enctype="multipart/form-data">
                     <div class="form-group row">

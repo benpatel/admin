@@ -101,6 +101,7 @@ require 'includes/header_start.php';
                             </div>
                             <div class="modal-body">
                                 <p>Page will be deleted permanently</p>
+                                <p>All Sections belongs to this page will be deleted as well!</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -121,6 +122,7 @@ require 'includes/header_start.php';
                             </div>
                             <div class="modal-body">
                                 <p>This page is an important part of the design, page can not be deleted!</p>
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
