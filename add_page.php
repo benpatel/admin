@@ -71,11 +71,11 @@ require 'includes/header_start.php';
                         <input type="checkbox" name="visibility" data-plugin="switchery" data-color="#ff5d48" data-secondary-color="#1bb99a" />
                                     
                     </div>
-                    <!--
+                    
                     <div class="form-group">
                     	<label for="page_title">Description <em class="text-danger"> (Any color formating in this editror will reflect on site as is )</em></label>
             			<textarea name="page_description"></textarea>
-            		</div> -->
+            		</div> 
 
             		<div class="form-group text-right m-b-0">
                         <button class="btn btn-primary waves-effect waves-light" type="submit">

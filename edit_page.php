@@ -102,12 +102,12 @@ $page_image !='' ? $page_image=SITE_ADMIN.'banners/'.$page_image : $page_image =
                     </div>
                
 
-                  <!--  <div class="form-group">
+                   <div class="form-group">
                     	<label for="page_title">Description <em class="text-danger"> (Any color formating in this editror will reflect on site as is )</em></label>
             			<textarea name="page_description">
             				<?php echo $page_description; ?>
             			</textarea>
-            		</div> -->
+            		</div>
 
             		<div class="form-group text-right m-b-0">
                         <button class="btn btn-primary waves-effect waves-light" type="submit">
