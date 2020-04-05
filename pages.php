@@ -36,7 +36,7 @@ require 'includes/header_start.php';
                     <thead>
                         <tr>
                             
-                            <th>Page Name</th>
+                            <th>Page Name </th>
                             <th style="width:150px;">Visibility</th>
                             <th  style="width:350px;" class="text-center">Action</th>
                         </tr>
@@ -54,7 +54,7 @@ require 'includes/header_start.php';
 							        while($result = $result_set->fetch_object()){
 							   ?>
 							   <tr>
-								   	<td><?php echo $result->page_title; ?></td>
+								   	<td><?php echo $result->page_title; ?> <i>(<?php echo $result->slug  ?></i>)</td>
 								   	<td><?php echo ucfirst($result->visibility); ?></td>
 								   	<td>
 

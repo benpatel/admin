@@ -193,6 +193,12 @@ function sendEmail($to,$subject,$message){
 
 }
 
+function get_asset($data){
+
+	return SITE_ADMIN."banners/".$data;
+
+}
+
 function sendEmailbySender($to,$subject,$message,$email){
 
 		$body = "<html>
