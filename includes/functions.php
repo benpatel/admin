@@ -193,11 +193,14 @@ function sendEmail($to,$subject,$message){
 
 }
 
-function get_asset($data){
-
+function get_banner($data){
 	return SITE_ADMIN."banners/".$data;
-
 }
+
+function get_image($data){
+	return SITE_BASE."images/".$data;
+}
+
 
 function sendEmailbySender($to,$subject,$message,$email){
 
