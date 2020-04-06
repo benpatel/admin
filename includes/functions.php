@@ -275,7 +275,7 @@ function slugify($text)
   $text = strtolower($text);
 
   if (empty($text)) {
-    return 'n-a';
+    return '-';
   }
 
   return $text;
