@@ -46,6 +46,9 @@
                             <a href="profile.php" class="dropdown-item notify-item">
                                 <i class="zmdi zmdi-account-circle"></i> <span>Profile</span>
                             </a>
+                            <a href="fun.php" class="dropdown-item notify-item">
+                                <i class="zmdi zmdi-account-circle"></i> <span>Fun Fact</span>
+                            </a>
 
                             <!-- item-->
                             <a href="settings.php" class="dropdown-item notify-item">
