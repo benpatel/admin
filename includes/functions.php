@@ -16,6 +16,12 @@ function curPageURL() {
 	return $pageURL;
 }
 
+function print_array($array){
+	echo "<pre>";
+	print_r($array);
+	echo "</pre>";
+}
+
 function random_str($length, $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
 {
     $str = '';

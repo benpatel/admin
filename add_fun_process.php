@@ -12,7 +12,7 @@ $ans = trim($dtb->escape_value($_POST['ans']));
 
 
 
-$sql="INSERT INTO `profile` (`id`, `seller_id`, `ans`, `que`) VALUES (NULL, '{$seller_id}', '{$ans}', '{$que}')";
+$sql="INSERT INTO `fun` (`id`, `seller_id`, `ans`, `que`) VALUES (NULL, '{$seller_id}', '{$ans}', '{$que}')";
 
 
 if($dtb->query($sql)){
