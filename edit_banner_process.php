@@ -11,7 +11,7 @@ $sql="UPDATE `banners` SET  `url` = '{$url}', `banner` = '{$banner}' WHERE `bann
 
 
 if($dtb->query($sql)){
-	redirect_to(SITE_ADMIN.'admin/banners.php");
+	redirect_to(SITE_ADMIN.'admin/banners.php');
 }
 
 
