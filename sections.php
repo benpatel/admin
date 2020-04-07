@@ -71,7 +71,7 @@ require 'includes/header_start.php';
                 ?>
 
                     <div class="section_title">
-                        <h4><?php echo $result->section_title; ?> <em>(Section ID : <?php echo $result->id; ?>)</em></h4>
+                        <h4><?php echo $result->section_title; ?> <em style="font-size: 12px;">(Section ID : <?php echo $result->id; ?>)</em></h4>
                         <p><?php echo $result->section_subtitle; ?></p>
 
                         <div class="section_control">
