@@ -71,7 +71,7 @@ require 'includes/header_start.php';
                 ?>
 
                     <div class="section_title">
-                        <h4><?php echo $result->section_title; ?></h4>
+                        <h4><?php echo $result->section_title; ?> <i>(<?php echo $result->id; ?>)</i></h4>
                         <p><?php echo $result->section_subtitle; ?></p>
 
                         <div class="section_control">
