@@ -4,7 +4,6 @@
 $envfile = '../environment.php';
 
 
-$_ENV["LOCAL"]="MD_Super";
 $whitelist = array(
     '127.0.0.1',
     '::1'
