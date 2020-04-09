@@ -57,7 +57,7 @@ require 'includes/header_start.php';
                                <tr id="faq-id-<?php echo $result->id;?>">
                                     <td class="faqer">
                                         <h3 class="que"><?php echo ucfirst($result->que); ?></h3>
-                                        <p class="ans"><?php echo ucfirst($result->ans); ?></p>
+                                        <p class="ans"><?php echo ucfirst(nl2br($result->ans,true)); ?></p>
                                             
                                     </td>
                                     <td style="">
