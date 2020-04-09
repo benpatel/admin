@@ -72,7 +72,7 @@ require 'includes/header_start.php';
 
                                         <?php
                                         switch ($result->duration) {
-                                            case 30:
+                                            case 0.5:
                                                 echo "half Hour";
                                                 break;
                                             case 1:
@@ -165,7 +165,7 @@ require 'includes/header_start.php';
                     <div class="form-group">
                         <label for="rate_duration">Duration</label>
                         <select class="form-control" name="rate_duration" id="rate_duration">
-                            <option value="30">Half Hour</option>
+                            <option value="0.5">Half Hour</option>
                             <option value="1">1 Hour</option>
                             <option value="1.5">1.5 Hours</option>
                             <option value="2">2 Hours</option>
