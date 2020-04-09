@@ -18,7 +18,7 @@ $sql="INSERT INTO `faqs` (`id`, `seller_id`, `ans`, `que`) VALUES (NULL, '{$sell
 if($dtb->query($sql)){
 	$data['status']='success';
 }else{
-	$data['error']['sql']="Error in submission";
+	$data['error']['sql']="Error in submissions";
 	$data['status']="error";
 }
 
