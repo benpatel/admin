@@ -22,7 +22,7 @@ if($total_row >=1){
 else{
 
 
-$sql="INSERT INTO `rates` (`id`,`city`, `seller_id`, `amount`,`outcall`, `duration`, `description`, `disclaimer`) VALUES (NULL,'{$city}', '{$seller_id}', '{$amount}', '{$outcall}',{$duration}', '{$description}', '{$disclaimer}')";
+$sql="INSERT INTO `rates` (`id`,`city`, `seller_id`, `amount`,`outcall`, `duration`, `description`, `disclaimer`) VALUES (NULL,'{$city}', '{$seller_id}', '{$amount}', '{$outcall}','{$duration}', '{$description}', '{$disclaimer}')";
 
 if($dtb->query($sql)){
 	$data['status']='success';
