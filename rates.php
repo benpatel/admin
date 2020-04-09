@@ -68,12 +68,16 @@ require 'includes/header_start.php';
                                             <p></p>
                                         </div>
                                         
-                                        <?php if($result->duration <48){
-                                                echo $result->duration." Hour";
-                                        } ?>
+                                        
 
                                         <?php
                                         switch ($result->duration) {
+                                            case 30:
+                                                echo "half Hour";
+                                                break;
+                                            case 1:
+                                                echo "1 Hours";
+                                                break;
                                             case 48:
                                                 echo "Weekend Gateway";
                                                 break;
@@ -96,7 +100,7 @@ require 'includes/header_start.php';
                                                 echo "Custom E";
                                                 break;    
                                             default:
-                                                // echo $result->duration;
+                                                echo $result->duration." Hours";
                                                 break;
                                         }
                                         ?>
